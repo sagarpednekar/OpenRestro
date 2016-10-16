@@ -1,0 +1,23 @@
+<div class="top-bar top-bar stacked-for-medium">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Restro App</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+    <%- if user_signed_in? %>
+     <li> <%= link_to "logout", destroy_user_session_path , method: :delete%></li>
+    <% else %>
+     <li> <%= link_to "login", new_user_session_path%></li>
+     <li><%= link_to "signup", new_user_registration_path %></li>
+    <% end %>
+
+    </ul>
+  </div>
+</div>
+<!-- Background Imge-->
+<div class="hero">
+  
+</div>
+
