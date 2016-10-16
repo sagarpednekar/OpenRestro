@@ -1,0 +1,25 @@
+  <%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+         <div class="row">
+              <%= f.number_field :pid, autofocus: true, class: "large-12 columns", placeholder: "Product ID"%>
+        </div>
+         <div class="row">
+              <%= f.text_area :name, autofocus: true, class: "large-12 columns", placeholder: "Name"%>
+        </div>
+        <div class="row">
+              <%= f.number_field :cost, autofocus: true, class: "large-12 columns", placeholder: "Price"%>
+        </div>
+          <div class="row">
+              <%= f.submit nil, class: "button expand large-12 large-centered columns" %>
+          </div>
+<% end %>

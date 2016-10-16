@@ -9,7 +9,11 @@ gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
 gem 'foundation-rails'
 gem 'devise'
+gem 'carrierwave'
+gem "mini_magick"
+gem 'fog'
 gem 'devise-foundation-views'
+gem 'paperclip', '~> 3.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
